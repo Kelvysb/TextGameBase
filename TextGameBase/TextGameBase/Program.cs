@@ -4,13 +4,17 @@ var service = new TextGameService();
 var exit = false;
 var currentQuestion = service.GetQuestion(1);
 
+Console.WriteLine("Informe seu nome:");
+var nome = Console.ReadLine();
+service.Valores.Add("<NOME>", nome);
+
 do
 {
     var proceed = false;
 
     do
     {
-        Console.WriteLine(currentQuestion?.Text);
+        Console.WriteLine(service.TratarValor(currentQuestion?.Text));
         foreach (var response in currentQuestion?.Responses)
         {
             Console.WriteLine($"{response.Sequence} - {response.Text}");

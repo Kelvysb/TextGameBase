@@ -14,6 +14,17 @@ namespace TextGameBase.Services
             LoadQuestions();
         }
 
+        public Dictionary<string, string> Valores { get; set; } = new Dictionary<string, string>();
+
+        public string TratarValor(string valor)
+        {
+            foreach (var chave in Valores.Keys)
+            {
+                valor = valor.Replace(chave, Valores[chave]);
+            }
+            return valor;
+        }
+
         public Question GetQuestion(int id)
         {
             return questionsRepository.GetById(id);
@@ -23,7 +34,7 @@ namespace TextGameBase.Services
         {
             try
             {
-                if (File.Exists("Questions.json"))
+                if (File.Exists("./Questions.json"))
                 {
                     var questions = JsonSerializer.Deserialize<List<Question>>(File.ReadAllText("Questions.json"));
                     questionsRepository.DeleteAll();
@@ -33,8 +44,9 @@ namespace TextGameBase.Services
                     }
                 }
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                Console.WriteLine("Erro ao carregar o arquivo: " + ex.Message);
             }
 
             var currentQuestions = questionsRepository.GetAll();

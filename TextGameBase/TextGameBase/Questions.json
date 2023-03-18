@@ -1,0 +1,81 @@
+[
+  {
+    "Id": 1,
+    "Text": "Bem vindo <NOME>",
+    "Responses": [
+      {
+        "Sequence": 1,
+        "Text": "Começar Jogo",
+        "TargetId": 2
+      },
+      {
+        "Sequence": 2,
+        "Text": "Sair",
+        "TargetId": 0
+      }
+    ]
+  },
+  {
+    "Id": 2,
+    "Text": "Você acordou, para onde vai primeiro?",
+    "Responses": [
+      {
+        "Sequence": 1,
+        "Text": "Banheiro",
+        "TargetId": 3
+      },
+      {
+        "Sequence": 2,
+        "Text": "Cozinha",
+        "TargetId": 4
+      },
+      {
+        "Sequence": 9,
+        "Text": "Sair do Jogo",
+        "TargetId": 0
+      }
+    ]
+  },
+  {
+    "Id": 3,
+    "Text": "O que fará no banheiro?",
+    "Responses": [
+      {
+        "Sequence": 1,
+        "Text": "Mijar",
+        "TargetId": 5
+      },
+      {
+        "Sequence": 2,
+        "Text": "Escovar os dentes",
+        "TargetId": 6
+      },
+      {
+        "Sequence": 9,
+        "Text": "Sair do Jogo",
+        "TargetId": 0
+      }
+    ]
+  },
+  {
+    "Id": 4,
+    "Text": "O que fará no banheiro?",
+    "Responses": [
+      {
+        "Sequence": 1,
+        "Text": "Mijar",
+        "TargetId": 5
+      },
+      {
+        "Sequence": 2,
+        "Text": "Escovar os dentes",
+        "TargetId": 6
+      },
+      {
+        "Sequence": 9,
+        "Text": "Sair do Jogo",
+        "TargetId": 0
+      }
+    ]
+  }
+]
